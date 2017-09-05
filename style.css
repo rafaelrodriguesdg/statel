@@ -1,0 +1,443 @@
+/*
+
+Theme Name: DietaNet Divi ChildTheme
+
+URI: http://www.softwaredietanet.com.br/
+
+Description: Customized Divi Theme for DietaNet
+
+Author: Rafael Rodrigues
+
+Author URI: http://rodriguesrafael.com.br/
+
+Template: Divi
+
+Version: 1.0.0
+
+Text Domain: Divi-child
+
+*/
+/* Use este stylesheet para customizar qualquer estilo do tema pai Divi. Lembre-se de não editar nenhum arquivo na pasta do tema pai e somente editar os arquivos da pasta do tema filho Divi-child.*/
+
+
+/* ELEMENTOS PRINCIPAIS---------------------------------*/
+
+
+/* Botões */
+
+.et_pb_button {
+    font-weight: 800 !important;
+}
+
+.et_pb_button.botao-secundario, .et_pb_button.botao-secundario:hover {
+    padding: 15px 12px !important;
+    letter-spacing: 1px !important;
+}
+
+
+/* Breakpoints */
+
+@media (min-width: 981px) and (max-width: 1550px) {
+    .et_pb_button {
+        font-size: 16px !important;
+    }
+    .et_pb_button.botao-secundario, .et_pb_button.botao-secundario:hover {
+        font-size: 13px !important;
+        padding: 14px 12px !important;
+        letter-spacing: 0 !important
+    }
+}
+
+@media (max-width: 980px) {
+    .et_pb_button {
+        font-size: 14px !important;
+    }
+    .et_pb_button.botao-secundario, .et_pb_button.botao-secundario:hover {
+        padding: 10px 12px !important;
+        letter-spacing: 0 !important
+    }
+}
+
+@media (max-width: 480px) {
+    .et_pb_button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* CABEÇALHO-TOPO---------------------------------*/
+
+#main-header {
+    border-top: 2px solid #4EDD9A;
+}
+
+#top-menu .menu-item:first-child a {
+    background: #00CC81;
+    padding: 10px !important;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+#top-menu .menu-item:first-child a:hover {
+    background: #4EDD9A;
+}
+
+.home #main-header.et-fixed-header #et-top-navigation nav>ul>li:first-child>a {
+    margin-right: 0;
+    opacity: 1;
+}
+
+.home #main-header #et-top-navigation nav>ul>li:first-child>a {
+    margin-right: 120px;
+    transition: 1s ease all;
+    opacity: 0;
+}
+
+
+/* Breakpoints */
+
+@media (max-width: 980px) {
+    #logo {
+        max-height: 80%;
+    }
+}
+
+@media (min-width: 981px) {
+    .et_fullwidth_nav #main-header .container {
+        width: 89%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+/* SEÇÃO INICIAL---------------------------------*/
+
+.titulo-secao-inicial h1 {
+    font-size: 60px;
+    padding: 30px 0;
+    font-weight: 700;
+}
+
+.titulo-secao-inicial p {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+/* Breakpoints */
+
+@media (min-width: 1550px) {
+    .titulo-secao-inicial h1 {
+        font-size: 70px;
+    }
+    #secao-inicial .et_pb_row_inner_0 {
+        padding-top: 110px;
+    }
+    #secao-inicial .et_pb_column_1_4 {
+        width: 325px !important;
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1550px) {
+    #secao-inicial .et_pb_row_inner_0 {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 981px) {
+    #secao-inicial .et_pb_column_0 {
+        padding-top: 0;
+    }
+}
+
+@media ( max-width: 479px) {
+    .titulo-secao-inicial h1 {
+        font-size: 32px;
+        padding: 0 0 30px;
+    }
+    #secao-inicial .et_pb_column_0 {
+        padding-top: 0 !important;
+    }
+}
+
+
+/* SEÇÃO RECURSOS PRINCIPAIS---------------------------------*/
+
+.recursos-principais .et_pb_main_blurb_image {
+    margin-bottom: 20px;
+}
+
+.recursos-principais h4 {
+    font-weight: 800;
+    padding-bottom: 12px;
+}
+
+
+/* Breakpoints */
+
+@media ( max-width: 479px) {
+    .recursos-principais {
+        margin-bottom: 40px !important;
+    }
+    .recursos-principais .et_pb_main_blurb_image {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* SEÇÃO NUTRICIONISTA---------------------------------*/
+
+/* Breakpoints */
+
+@media (min-width: 768px) and (max-width: 1506px) {
+    #secao-nutricionista h2 {
+        font-size: 50px !important;
+    }
+    #secao-nutricionista p {
+        font-size: 20px;
+        line-height: 1.5em;
+    }
+    .divisor-secao-nutricionista {
+        height: 40px !important;
+    }
+}
+
+@media (max-width: 479px) {
+  #secao-nutricionista .et_pb_promo {
+    padding: 40px 0;
+  }
+}
+
+
+/* SEÇÃO FUNCIONALIDADES---------------------------------*/
+
+.screenshots-slider {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.screenshots-slider:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#secao-funcionalidades .et_pb_blurb {
+    box-shadow: 0px 6px 16px 0 rgba(0, 0, 0, .09);
+    margin-bottom: 6%;
+    min-height: 214px;
+}
+
+.expandir-texto {
+    margin-bottom: 0 !important;
+}
+
+.expandir-texto .su-expand-link {
+    margin-top: 0 !important;
+    font-weight: bold;
+}
+
+
+/* Breakpoints */
+
+@media (max-width: 480px) {
+    #secao-funcionalidades h2 {
+        padding-bottom: 20px;
+    }
+    #secao-funcionalidades .et_pb_main_blurb_image {
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+    .screenshots-slider .et_pb_gallery_items {
+        padding: 30px 0;
+    }
+}
+
+
+/* SEÇÃO COMPRAR---------------------------------*/
+
+#secao-comprar h2, #secao-teste-gratis h2 {
+    margin-bottom: 15px;
+}
+
+
+/* Breakpoints */
+
+@media (min-width: 768px) and (max-width: 1506px) {
+    .divisor-secao-comprar {
+        height: 10px !important;
+    }
+    #secao-comprar .et_pb_text_4 {
+        font-size: 60px;
+    }
+    .imagem-produto {
+        padding-top: 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagem-produto img {
+        margin-top: 40px;
+    }
+}
+
+
+/* SEÇÃO CONTATO---------------------------------*/
+
+.titulo-informacoes .et_pb_blurb_container {
+    vertical-align: middle;
+}
+
+.titulo-informacoes .et_pb_blurb_content {
+    max-width: 100%;
+}
+
+.botao-secao-contato {
+    display: inline-block;
+    color: #29363f !important;
+    font-size: 13px;
+    border: 2px solid #29363f;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 11px;
+    border-radius: 3px;
+    margin-top: 19px;
+}
+
+.botao-secao-contato:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.botao-secao-contato.et_pb_custom_button_icon:before {
+    content: attr(data-icon);
+    font-family: "ETmodules" !important;
+    margin-right: .4em;
+    font-weight: normal;
+    line-height: 1.7em;
+}
+
+
+/* Formulário de Contato */
+
+.lightbox-contactform {
+    text-align: left !important;
+    width: 99% !important;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, .09) !important;
+}
+
+
+/* Social Media Icones */
+
+.et_pb_social_media_follow li a.icon {
+    width: 64px;
+    height: 64px;
+}
+
+.et_pb_social_media_follow li a.icon::before {
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    line-height: 64px;
+}
+
+
+/* Breakpoints */
+@media (min-width: 768px) and (max-width: 1506px) {
+    .dados-contato p:last-child {
+        font-size: 34px !important;
+    }
+}
+@media (min-width: 981px) {
+    .lightbox-contactform {
+        width: 45% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #secao-contato .et_pb_column_16 {
+        margin-bottom: 0;
+    }
+    .dados-contato p {
+        font-size: 24px !important;
+        text-align: center !important;
+    }
+    .et_pb_social_media_follow {
+        padding-right: 30px !important;
+    }
+}
+
+
+/* RODAPÉ---------------------------------*/
+
+#footer-bottom .container {
+    margin-right: 2.773%;
+    margin-left: 2.773%;
+    width: 94.454%!important;
+    max-width: 94.454%;
+}
+
+
+/* FORMULARIOS DE CONTATO---------------------------------*/
+
+.wpcf7-text, .wpcf7-textarea, .wpcf7-captchar {
+    background-color: #eee !important;
+    border: none !important;
+    width: 100% !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    font-size: 14px;
+    color: #000 !important;
+    padding: 16px !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wpcf7-submit {
+    width: 100%;
+    color: #fff !important;
+    padding: 0.6em 1em !important;
+    margin: 8px auto 0;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Open Sans", Arial, sans-serif;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 6px 20px;
+    line-height: 1.7em;
+    background: #c73030;
+    border: 2px solid #c73030;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.wpcf7-submit:hover {
+    background-color: #d84646;
+    border-color: #d84646;
+}
+
+
+/* SIDEBAR---------------------------------*/
+
+
+/* WIDGETS---------------------------------*/
+
+
+/* MOBILE---------------------------------*/
+
+.mobile_menu_bar:before {
+    color: #4EDD9A !important;
+}
+
+.et_mobile_menu {
+    border-top: 3px solid #4EDD9A;
+}
