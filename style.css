@@ -21,8 +21,9 @@ Text Domain: statel
 
 /* CABEÇALHO-TOPO */
 
-#top-menu .menu-item:last-child a {
-    border: 1px solid rgba(0,4,12,0.85);
-    padding: 2px !important;
+#top-menu #areacliente {
+    padding: 4px !important;
     font-size: 13px; 
+    background: #006698;
+    color: #fff;
 }
