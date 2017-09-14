@@ -1,30 +1,30 @@
-/*
-
-Theme Name: STA Telecom - Divi-child theme
-
-URI: http://www.statel.com.br/
-
-Description: Tema filho 'STA Telecom' customizado a partir do tema pai 'Divi'. (Obs: O tema Divi é necessário para funcionamento desse tema. Nunca delete a pasta do tema pai Divi)
-
-Author: Rafael Rodrigues
-
-Author URI: http://rodriguesrafael.com.br/
-
-Template: Divi
-
-Version: 1.0.0
-
-Text Domain: statel
-
-*/
-/* Use este stylesheet para customizar qualquer estilo do tema pai Divi. Lembre-se de não editar nenhum arquivo na pasta do tema pai e somente editar os arquivos da pasta do tema filho statel.*/
-
-/* CABEÇALHO-TOPO */
-
-#top-menu #areacliente {
-    padding: 4px !important;
-    font-size: 13px; 
-    background: #006698;
-    color: #fff;
-    text-transform: none;
+/*
+
+Theme Name: STA Telecom - Divi-child theme
+
+URI: http://www.statel.com.br/
+
+Description: Tema filho 'STA Telecom' customizado a partir do tema pai 'Divi'. (Obs: O tema Divi é necessário para funcionamento desse tema. Nunca delete a pasta do tema pai Divi)
+
+Author: Rafael Rodrigues
+
+Author URI: http://rodriguesrafael.com.br/
+
+Template: Divi
+
+Version: 1.0.0
+
+Text Domain: statel
+
+*/
+/* Use este stylesheet para customizar qualquer estilo do tema pai Divi. Lembre-se de não editar nenhum arquivo na pasta do tema pai e somente editar os arquivos da pasta do tema filho statel.*/
+
+/* CABEÇALHO-TOPO */
+
+#top-menu #areacliente {
+    padding: 4px !important;
+    font-size: 13px; 
+    background: #006698;
+    color: #fff;
+	text-transform: none;
 }
