@@ -19,3 +19,16 @@ Text Domain: statel
     background: #006698;
     color: #fff;
 }
+
+/* DIVERSOS */
+
+.toggle-button.closed:after {
+    content:"\33";
+}
+.toggle-button.opened:after{
+    content:"\32";
+}
+#toggle-servicos p, #toggle-clientes p {
+    border:1px solid #75d1f6;
+    padding: 10px;
+}
