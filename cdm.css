@@ -1,0 +1,31 @@
+/* Use este stylesheet para customizar os estilos do plugin SP Project & Document Manager */
+
+#plugin-spdocs #cdm_nav_buttons {
+	float: left;
+}
+
+#plugin-spdocs .et_pb_code_inner div:nth-child(2) {
+	float: right;
+	text-align: left !important;
+    padding: 0 !important;
+}
+
+#plugin-spdocs input#search_files {
+	margin-right: 10px;
+    height: 35px;
+    padding: 6px 10px;
+    vertical-align: middle;
+}
+
+#plugin-spdocs .ui-button-text-only .ui-button-text {
+	padding: 0.4em;
+	text-transform: uppercase;
+}
+
+#plugin-spdocs .cdm_button {
+	padding: 4px 18px;
+}
+
+#plugin-spdocs .cdm_nav_buttons a:link {
+	border-radius: 3px;
+}
