@@ -76,3 +76,11 @@
 .cdm-modal .sp-cdm-file-view-refresh {
 	padding: 0px 16px;
 }
+
+.cdm-modal .cdm-two-column .l-column {
+	width: 40%;
+}
+
+.cdm-modal .cdm-two-column .r-column {
+	width: 60%;
+}
