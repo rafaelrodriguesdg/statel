@@ -20,14 +20,12 @@ function show_loggedin_function( $atts ) {
     
     global $current_user, $user_login;
     wp_get_current_user();
-    
-    $user_info = get_userdata($current_user->ID);
-    $user_role = implode(', ', $user_info->roles);
 
+    $user_info = get_userdata($current_user->ID);
 
     add_filter('widget_text', 'do_shortcode');
     if ($user_login) 
-        return '<h4>' . $current_user->display_name . '</h4><p>' . $current_user->user_email . ' <span style="text-transform:uppercase; font-style:oblique;">(' . $user_role . ')</span></p>';
+        return '<h4>' . $current_user->display_name . '</h4><p>' . $current_user->user_email . ' <span style="text-transform:uppercase; font-style:oblique;">(' . implode(', ', $user_info->roles) . ')</span></p>';
     else
         return '<a href="' . wp_login_url() . ' ">Login</a>';
     
