@@ -1,0 +1,166 @@
+<button id="botao-abrir-modal" class="at-modal__button at-modal__button--primary" data-modal-action="open" data-modal-target="modal-1"
+    type="button"><i class="fa fa-upload" aria-hidden="true"></i> Enviar Arquivos</button>
+
+<div id="modal-up-files" class="at-modal" data-modal="modal-1">
+    <div class="modal-content">
+        <header class="at-modal__header">Envio de arquivos</header>
+        <section class="at-modal__section">
+            <ul>
+                <li><b>1º</b> Selecione os arquivos* que deseja enviar clicando em <strong>'Adicionar Arquivos'</strong>.</li>
+                <li><b>2º</b> Clique no botão <strong>'Enviar Arquivos'</strong> e aguarde a conclusão do envio.</li>
+                <li><b>3º</b> Pronto! Finalize em <strong>'Concluir'</strong>.</li>
+            </ul>
+            [fileup base="3" makedir="true" matchdrawer="3" uploadlabel="Enviar Arquivos" fadein="opacity" fadetime="1000" uploader="name" theme="silver-bullet" align="right"]
+            <span style="font-size:12px; line-height:1.5;"><i>*Tamanho permitido: até 15MB por arquivo somando no máximo 64MB.<br>Formatos permitidos: imagem[jpg, png, gif], documento[pdf, doc, xls], compactado[zip, rar, 7z], audio[mp3], video[avi, mp4]</i></span>
+        </section>
+        <footer class="at-modal__footer">
+            <a class="at-modal__button" data-modal-action="close" href="#close">Cancelar</a>
+            <button id="botao-confirmar-envio" class="at-modal__button at-modal__button--success confirmar-disabled">Concluir</button>
+ </footer>
+ </div>
+</div>
+<style>
+.at-modal {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background: #FFFFFF;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    border: 1px solid #888;
+    border-radius: 3px;
+    max-width: 600px;
+    width: 90%;
+    /* Could be more or less, depending on screen size */
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.at-modal__header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 25px;
+    color: #006698;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.at-modal__section {
+    max-height: calc(100vh - 460px);
+    overflow-y: auto;
+    padding: 20px;
+    line-height: 26px;
+    font-size: 14px;
+}
+
+.at-modal__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.at-modal__footer .at-modal__button {
+    margin: 0 5px;
+}
+
+.at-modal__footer .at-modal__button:last-child {
+    margin-right: 0;
+}
+
+.at-modal__button {
+    display: inline-block;
+    background: #FFFFFF;
+    height: 36px;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    color: #404040;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.at-modal__button--primary {
+    background: #0080FF;
+    color: #FFFFFF;
+}
+
+.at-modal__button--success {
+    background: #00d067;
+    color: #FFFFFF;
+}
+
+.confirmar-disabled {
+    background: #96e4bc;
+}
+
+.at-modal__button--primary:hover {
+    background: #006FD6;
+    color: #FFFFFF;
+}
+
+.at-modal__button--success:hover {
+    background: #00BB5A;
+    color: #FFFFFF;
+}
+
+.confirmar-disabled:hover {
+    background: #96e4bc;
+}
+</style>
+<script>
+jQuery('.at-modal__button[data-modal-action="open"]').on('click', function (e) {
+    
+    jQuery('.at-modal[data-modal="' + jQuery(this).attr('data-modal-target') + '"]').show();
+    // window.parent.scrollTop(0, 250);
+    if(window.name !== '' && window.name !== 'new' && window.name !== 'blank' && window.name !== '_new'){ 
+        $name = window.name;
+    }
+    else {
+        $name = jQuery(this).parents('div.ssfa-meta-container').attr('id');		
+    }
+    jQuery('html, body', window.top.document).animate({
+	    scrollTop: jQuery("div#"+$name, window.top.document).offset().top -10
+	}, 500);
+    e.preventDefault();
+});
+jQuery('.at-modal__button[data-modal-action="close"]').on('click', function (e) {
+    e.preventDefault();
+    jQuery(this).closest('.at-modal').hide();
+});
+jQuery(".ssfa_fileup_wrapper span:last-child").click(function () {
+    if (jQuery('.ssfa_fileup_files_container').is(':empty')) {
+        return false;
+    } else {
+        jQuery('#botao-confirmar-envio').removeClass('confirmar-disabled');
+    }
+});
+jQuery('#botao-confirmar-envio').click(function () {
+    if (jQuery(this).hasClass('confirmar-disabled') || jQuery('.ssfa_fileup_files_container').is(':empty')) {
+        alert("Você precisa clicar em 'Enviar Arquivos' primeiro!");
+    } else {
+        window.location.reload();
+    }
+});
+</script>

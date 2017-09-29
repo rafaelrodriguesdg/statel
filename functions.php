@@ -46,3 +46,15 @@ function shortcode_user_avatar() {
     }
 }
 add_shortcode('display-user-avatar','shortcode_user_avatar');
+
+
+// Redireciona o usuário para página de login ao acessar a area do cliente
+function redirect_to_specific_page() {
+    $page = get_page_by_title('Área do Cliente');
+    if ( is_page($page->ID) && ! is_user_logged_in() ) {
+        wp_redirect( wp_login_url() ); 
+        exit;
+    }
+}
+add_action( 'template_redirect', 'redirect_to_specific_page' );
+
