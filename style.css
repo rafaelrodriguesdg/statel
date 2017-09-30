@@ -32,3 +32,12 @@ Text Domain: statel
     border:1px solid #75d1f6;
     padding: 10px;
 }
+#botao-logout {
+    margin-left: 10px;
+    border: 1px solid #fff;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+#botao-logout:hover {
+    background-color: #01659c;
+}

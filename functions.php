@@ -25,7 +25,10 @@ function show_loggedin_function( $atts ) {
 
     add_filter('widget_text', 'do_shortcode');
     if ($user_login) 
+        /* Função retornava: email e user role
         return '<h4>' . $current_user->display_name . '</h4><p>' . $current_user->user_email . ' <span style="text-transform:uppercase; font-style:oblique;">(' . implode(', ', $user_info->roles) . ')</span></p>';
+        */
+        return '<h4>' . $current_user->display_name . '</h4><p>' . $current_user->user_email . ' <a href="' . wp_logout_url( ) . '"><span id="botao-logout"><i class="fa fa-sign-out" aria-hidden="true" style="font-family:FontAwesome;"></i> Sair</span></a>';
     else
         return '<a href="' . wp_login_url() . ' ">Login</a>';
     
