@@ -10,8 +10,8 @@
                 <li><b>2º</b> Clique no botão <strong>'Enviar Arquivos'</strong> e aguarde a conclusão do envio.</li>
                 <li><b>3º</b> Pronto! Finalize em <strong>'Concluir'</strong>.</li>
             </ul>
-            [fileup base="3" makedir="true" matchdrawer="3" uploadlabel="Enviar Arquivos" fadein="opacity" fadetime="1000" uploader="name" theme="silver-bullet" align="right"]
-            <span style="font-size:12px; line-height:1.5;"><i>*Tamanho permitido: até 15MB por arquivo somando no máximo 64MB.<br>Formatos permitidos: imagem[jpg, png, gif], documento[pdf, doc, xls], compactado[zip, rar, 7z], audio[mp3], video[avi, mp4]</i></span>
+            [fileup base="3" makedir="true" matchdrawer="3" uploadlabel="Enviar Arquivos" action="prohibit" filegroups="application,css,script" fadein="opacity" fadetime="1000" uploader="name" theme="silver-bullet" align="right"]
+            <span style="font-size:12px; line-height:1.5;"><i>*Tamanho permitido: até 15MB por arquivo e a soma dos arquivos não deve ultrapassar 64MB.<br>Formatos permitidos: imagens, documentos, arquivos compactados, audios e videos</i></span>
         </section>
         <footer class="at-modal__footer">
             <a class="at-modal__button" data-modal-action="close" href="#close">Cancelar</a>
