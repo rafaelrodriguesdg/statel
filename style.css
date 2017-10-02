@@ -51,9 +51,10 @@ Text Domain: statel
     text-align: center;
 }
 #signup-content .wp-activate-container {
-    width: 600px;
+    width: 450px;
     margin: 0 auto;
     border: 2px solid #006698;
+    padding: 30px;
 }
 #signup-content .wp-activate-container h2 {
     font-weight: bold;
