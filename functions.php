@@ -73,11 +73,11 @@ function linkto_userfolder( $atts ) {
     wp_get_current_user();
 
     $user_info = get_userdata($current_user->ID);
-    $nome_usuario = $current_user->user_firstname;   
+    $nome_usuario = $current_user->user_login;   
 
     add_filter('widget_text', 'do_shortcode');
     if ($user_login) {
         return '<a href="?drawer1=area-do-cliente*' . implode(', ', $user_info->roles) . '*' . $nome_usuario . '" class="btn-irarquivos">Ir para Meus Arquivos <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>';
     }
+}
 add_shortcode( 'show_linkto_userfolder', 'linkto_userfolder' );
-
