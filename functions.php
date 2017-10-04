@@ -15,7 +15,6 @@ function my_et_builder_post_types( $post_types ) {
 add_filter( 'et_builder_post_types', 'my_et_builder_post_types' );
 
 // Shortcode para exibir informações do usuário logado
-
 function show_loggedin_function( $atts ) {
     
     global $current_user, $user_login;
@@ -41,7 +40,6 @@ function show_loggedin_function( $atts ) {
 add_shortcode( 'show_loggedin_as', 'show_loggedin_function' );
 
 // Shortcode para exibir avatar do usuário logado
-
 function shortcode_user_avatar() {
     if(is_user_logged_in()) { // check if user is logged in
         global $current_user; // get current user's information
@@ -66,7 +64,6 @@ function redirect_to_specific_page() {
 }
 
 // Shortcode para exibir link para pasta do usuário logado (File Away)
-
 function linkto_userfolder( $atts ) {
     
     global $current_user, $user_login;
@@ -81,3 +78,16 @@ function linkto_userfolder( $atts ) {
     }
 }
 add_shortcode( 'show_linkto_userfolder', 'linkto_userfolder' );
+
+// Cria pasta própria para cada novo usuário assim que ele faz login
+add_action( 'wp_login', 'create_user_dir', 10, 2);
+
+function create_user_dir($user_login, $user) {
+    $user_info = get_userdata($user->ID);
+    $nome_usuario = $user_login;
+    $funcao_usuario = implode(', ', $user_info->roles);
+    $upload_dir = wp_upload_dir();
+    $user_dir = $upload_dir['basedir'] . '/area-do-cliente/' . $funcao_usuario . '/' . $nome_usuario;
+
+    if(!file_exists($user_dir)) wp_mkdir_p($user_dir);
+}
