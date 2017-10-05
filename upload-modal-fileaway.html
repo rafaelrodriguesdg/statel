@@ -1,16 +1,19 @@
 <button id="botao-abrir-modal" class="at-modal__button at-modal__button--primary" data-modal-action="open" data-modal-target="modal-1"
-    type="button"><i class="fa fa-upload" aria-hidden="true"></i> Enviar Arquivos</button>
+type="button"><i class="fa fa-upload" aria-hidden="true"></i> Enviar Arquivos</button>
 
 <div id="modal-up-files" class="at-modal" data-modal="modal-1">
     <div class="modal-content">
         <header class="at-modal__header">Envio de arquivos</header>
         <section class="at-modal__section">
             <ul>
-                <li><b>1º</b> Selecione os arquivos* que deseja enviar clicando em <strong>'Selecionar Arquivos'</strong>.</li>
-                <li><b>2º</b> Clique no botão <strong>'Enviar Arquivos'</strong> e aguarde a conclusão do envio.</li>
-                <li><b>3º</b> Pronto! Finalize em <strong>'Concluir'</strong>.</li>
+                <li><b>1º</b> Na caixa de seleção abaixo, selecione a <strong>'Pasta Destino'</strong> para qual os arquivos serão enviados.</li>
+                <li><b>2º</b> Selecione os arquivos* que deseja enviar clicando em <strong>'Selecionar Arquivos'</strong>.</li>
+                <li><b>3º</b> Clique no botão <strong>'Enviar Arquivos'</strong> e aguarde a conclusão do envio de todos os arquivos.</li>
+                <li><b>4º</b> Pronto! Finalize <strong>'Concluir'</strong>.</li>
             </ul>
-            [fileup base="3" makedir="true" matchdrawer="1" uploadlabel="Enviar Arquivos" action="prohibit" filegroups="application,css,script" fadein="opacity" fadetime="1000" uploader="name" theme="silver-bullet" align="right"]
+            <hr>
+            [fileup base="1" makedir="true" uploadlabel="Enviar Arquivos ➚" action="prohibit" filegroups="application,css,script" fadein="opacity"
+            fadetime="1000" uploader="name" theme="silver-bullet" align="left"]
             <span style="font-size:12px; line-height:1.5;"><i>*Tamanho permitido: até 15MB por arquivo e a soma dos arquivos não deve ultrapassar 64MB.<br>Formatos permitidos: imagens, documentos, arquivos compactados, audios e videos</i></span>
         </section>
         <footer class="at-modal__footer">
@@ -163,7 +166,7 @@
     });
     jQuery('#botao-confirmar-envio').click(function () {
         if (jQuery(this).hasClass('confirmar-disabled') || jQuery('.ssfa_fileup_files_container').is(':empty')) {
-            alert("Você precisa clicar em 'Enviar Arquivos' primeiro!");
+            alert("Você precisa clicar em 'Enviar Arquivos' antes de concluir.");
         } else {
             window.location.reload();
             jQuery(this).html("<i class='fa fa-spinner fa-spin '></i>");
