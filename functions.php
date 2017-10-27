@@ -91,3 +91,18 @@ function create_user_dir($user_login, $user) {
 
     if(!file_exists($user_dir)) wp_mkdir_p($user_dir);
 }
+
+
+/* DESATIVADO: Cria pasta própria para cada novo usuário assim que ele é registrado
+add_action( 'user_register', 'create_user_dir', 10, 1);
+
+function create_user_dir($user_id) {
+    $user_info = get_userdata($user_id);
+    $nome_usuario = $user_info->user_login;
+    $funcao_usuario = implode(', ', $user_info->roles);
+    $upload_dir = wp_upload_dir();
+    $user_dir = $upload_dir['basedir'] . '/area-do-cliente/' . $funcao_usuario . '/' . $nome_usuario;
+
+    if(!file_exists($user_dir)) wp_mkdir_p($user_dir);
+} */
+
